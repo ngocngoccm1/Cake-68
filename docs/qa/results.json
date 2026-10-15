@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-14",
+  "browser": "Chrome / Playwright",
+  "viewports": [
+    {
+      "width": 320,
+      "result": "PASS"
+    },
+    {
+      "width": 360,
+      "result": "PASS"
+    },
+    {
+      "width": 375,
+      "result": "PASS"
+    },
+    {
+      "width": 390,
+      "result": "PASS"
+    },
+    {
+      "width": 430,
+      "result": "PASS"
+    },
+    {
+      "width": 768,
+      "result": "PASS"
+    },
+    {
+      "width": 820,
+      "result": "PASS"
+    },
+    {
+      "width": 1024,
+      "result": "PASS"
+    },
+    {
+      "width": 1280,
+      "result": "PASS"
+    },
+    {
+      "width": 1440,
+      "result": "PASS"
+    },
+    {
+      "width": 1920,
+      "result": "PASS"
+    }
+  ],
+  "javascriptErrors": [],
+  "checks": [
+    "no overflow",
+    "mobile menu X/Escape/backdrop/links",
+    "keyboard focus trap",
+    "active navigation",
+    "14 product categories",
+    "keyboard tabs",
+    "anchor targets",
+    "email/phone URLs",
+    "lightbox",
+    "clipboard",
+    "image decoding",
+    "reduced motion",
+    "no-JS content"
+  ]
+}
