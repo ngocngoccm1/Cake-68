@@ -22,3 +22,7 @@ Chrome thực tế chạy headless qua Playwright trên Windows; viewport mô ph
 Ảnh viewport: `desktop.jpg`, `mobile.jpg`, `mobile-menu.jpg`. Ảnh toàn trang: `desktop-full.jpg`, `mobile-full.jpg`.
 
 Lưu ý ảnh chụp toàn trang của Chrome ghép vùng cuộn: sidebar hoặc thanh mobile `position: fixed` có thể xuất hiện ở vị trí viewport cuối khi chụp. Kiểm tra bố cục cố định bằng các ảnh viewport, không bằng vị trí của nó trong ảnh ghép toàn trang.
+
+## Cập nhật 15/10/2026 — tăng độ dày chữ và tương phản
+
+Đã kiểm tra lại ở 320, 375, 430, 768, 1024 và 1440px sau chỉnh typography. Tất cả PASS: không tràn ngang, không lỗi JavaScript hoặc asset; heading weight 600, italic 500, body 450 và CTA 600. Đã xem lại ảnh thực tế desktop 1440px và mobile 375px, thử mở/đóng menu mobile. Ảnh chụp giao diện trong thư mục đã được cập nhật. Chi tiết: `type-refresh-results.json`.

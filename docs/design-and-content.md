@@ -44,7 +44,7 @@ Không website nào trong ba mẫu đã xem dùng sidebar trái ở trang chủ.
 
 ## Design system
 
-- Màu: đỏ rượu `#610f1d`, đỏ sẫm `#490b15`, trắng ngà `#fffdf9`, nền ấm `#f8f5ef`, chữ `#342c28`, nét phân cách `#e5ddd3`, vàng trầm `#b58d4a`.
+- Màu: đỏ rượu `#570c1b`, đỏ sẫm `#3e0712`, trắng ngà `#fffdf9`, nền ấm `#f2ece3`, chữ `#2c211e`, nét phân cách `#d8c9bb`, vàng trầm `#b58d4a`.
 - Typography: Cormorant Garamond cho display và italic; DM Sans cho nội dung và điều khiển. Font thật từ Google Fonts, self-host WOFF2, có giấy phép OFL, hỗ trợ ký tự Phần Lan.
 - Khoảng cách: khoảng nhỏ 8–12–16–24px; khoảng thành phần 32–40–56px; nhịp section khoảng 64px mobile và 78–116px desktop.
 - Grid: sidebar 244px desktop, 220px ở laptop nhỏ, 268px ở màn hình lớn; nội dung 2 cột có tỷ lệ thay đổi. Drawer mobile 280px, giới hạn 86vw.
@@ -73,3 +73,7 @@ Người dùng đã cho phép tạo ảnh thay cho ảnh thực tế. Công cụ
 Theo hướng dẫn bổ sung của người dùng, bỏ qua trong giao diện: URL Facebook/Instagram, địa chỉ, giờ hoạt động, bảng giá. Không có yêu cầu chờ các thông tin đó mới hoàn thành.
 
 URL GitHub Pages chính thức chưa có. Khi biết URL, dùng `scripts/set-site-url.py` để cập nhật canonical và Open Graph thành URL tuyệt đối. Chưa triển khai/push vào tài khoản GitHub; bản bàn giao đã sẵn sàng cho static hosting.
+
+## Cập nhật typography — 15/10/2026
+
+Theo yêu cầu tăng độ dày chữ và làm rõ đậm–nhạt: heading dùng Cormorant Garamond 600, phần italic 500; nội dung DM Sans 450; menu 500, mục active và CTA 600. Chữ nội dung đậm hơn, nền cream ấm hơn và đỏ rượu sâu hơn để phân cấp rõ. Dùng đúng weight của font variable đã self-host, không thêm text-shadow hoặc stroke giả. Giữ bố cục sidebar và kiểm tra lại cả mobile.

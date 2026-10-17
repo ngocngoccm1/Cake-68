@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-15",
+  "viewports": [
+    {
+      "width": 320,
+      "status": "PASS",
+      "weights": {
+        "heading": "600",
+        "italic": "500",
+        "body": "450",
+        "button": "600"
+      }
+    },
+    {
+      "width": 375,
+      "status": "PASS",
+      "weights": {
+        "heading": "600",
+        "italic": "500",
+        "body": "450",
+        "button": "600"
+      }
+    },
+    {
+      "width": 430,
+      "status": "PASS",
+      "weights": {
+        "heading": "600",
+        "italic": "500",
+        "body": "450",
+        "button": "600"
+      }
+    },
+    {
+      "width": 768,
+      "status": "PASS",
+      "weights": {
+        "heading": "600",
+        "italic": "500",
+        "body": "450",
+        "button": "600"
+      }
+    },
+    {
+      "width": 1024,
+      "status": "PASS",
+      "weights": {
+        "heading": "600",
+        "italic": "500",
+        "body": "450",
+        "button": "600"
+      }
+    },
+    {
+      "width": 1440,
+      "status": "PASS",
+      "weights": {
+        "heading": "600",
+        "italic": "500",
+        "body": "450",
+        "button": "600"
+      }
+    }
+  ],
+  "javascriptOrAssetErrors": []
+}
