@@ -35,6 +35,68 @@ sidebar.querySelectorAll('a').forEach(link => link.addEventListener('click', () 
 mobileQuery.addEventListener('change', () => setMenu(false, false));
 setMenu(false, false);
 
+// The opening gallery follows the reference's large photo and oval thumbnail ring.
+const showcaseImage = document.getElementById('showcase-image');
+const showcaseCaption = document.getElementById('showcase-caption');
+const orbitCards = [...document.querySelectorAll('.cake-orbit-card')];
+const slideButtons = [...document.querySelectorAll('[data-slide]')];
+const showcaseSlides = [
+  { image: 'mousse', label: 'Moussekakut', alt: 'Inspiraatiokuva: suklaamoussekakku vadelmilla', position: '50% 56%' },
+  { image: 'hero', label: 'Juhlakakut', alt: 'Inspiraatiokuva: vaalea juhlakakku marjoilla ja rusetilla', position: '50% 53%' },
+  { image: 'wedding', label: 'Hääkakut', alt: 'Inspiraatiokuva: kaksikerroksinen hääkakku vaaleilla kukilla', position: '50% 47%' },
+  { image: 'craft', label: 'Käsityön kauneutta', alt: 'Inspiraatiokuva: kakun kermakoristeita pursotetaan käsin', position: '50% 50%' }
+];
+let showcaseIndex = 0;
+let orbitRotation = 0;
+let showcaseSlot = 0;
+function selectShowcase(index, slot) {
+  const next = (index + showcaseSlides.length) % showcaseSlides.length;
+  const nextSlot = slot ?? next * 3;
+  let distance = nextSlot - showcaseSlot;
+  if (distance > 6) distance -= 12;
+  if (distance < -6) distance += 12;
+  orbitRotation -= distance * 30;
+  showcaseSlot = nextSlot;
+  showcaseIndex = next;
+  const slide = showcaseSlides[next];
+  showcaseImage.src = './assets/images/' + slide.image + '.webp';
+  showcaseImage.parentElement.style.setProperty('--showcase-background', 'url("./assets/images/' + slide.image + '.webp")');
+  showcaseImage.alt = slide.alt;
+  showcaseImage.style.objectPosition = slide.position;
+  showcaseCaption.replaceChildren(document.createTextNode(slide.label + ' '));
+  const counter = document.createElement('span');
+  counter.textContent = String(next + 1).padStart(2, '0') + ' / 04';
+  showcaseCaption.append(counter);
+  slideButtons.forEach(button => button.setAttribute('aria-pressed', String(Number(button.dataset.slot) === nextSlot)));
+  orbitCards.forEach(card => {
+    const angle = (90 + Number(card.dataset.slot) * 30 + orbitRotation) * Math.PI / 180;
+    const depth = (Math.sin(angle) + 1) / 2;
+    card.style.left = (50 + Math.cos(angle) * 39) + '%';
+    card.style.top = (43 + Math.sin(angle) * 25) + '%';
+    card.style.setProperty('--card-scale', .7 + depth * .45);
+    card.style.zIndex = String(Math.round(depth * 20) + 1);
+  });
+}
+slideButtons.forEach(button => button.addEventListener('click', () => selectShowcase(Number(button.dataset.slide), Number(button.dataset.slot))));
+document.getElementById('showcase-previous').addEventListener('click', () => selectShowcase(showcaseIndex - 1));
+document.getElementById('showcase-next').addEventListener('click', () => selectShowcase(showcaseIndex + 1));
+document.querySelector('.cake-selector').addEventListener('keydown', event => {
+  if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+    event.preventDefault();
+    selectShowcase(showcaseIndex + (event.key === 'ArrowRight' ? 1 : -1));
+  }
+});
+let showcaseTouchStart = null;
+showcaseImage.addEventListener('touchstart', event => { showcaseTouchStart = event.touches[0].clientX; }, { passive: true });
+showcaseImage.addEventListener('touchend', event => {
+  if (showcaseTouchStart === null) return;
+  const distance = event.changedTouches[0].clientX - showcaseTouchStart;
+  if (Math.abs(distance) > 45) selectShowcase(showcaseIndex + (distance < 0 ? 1 : -1));
+  showcaseTouchStart = null;
+}, { passive: true });
+showcaseImage.addEventListener('touchcancel', () => { showcaseTouchStart = null; }, { passive: true });
+selectShowcase(0);
+
 document.addEventListener('keydown', event => {
   if (!menuIsOpen) return;
   if (event.key === 'Escape') { event.preventDefault(); setMenu(false); }

@@ -44,21 +44,41 @@
     </div>
   </aside>
   <main id="main">
-    <section class="hero observed-section" id="etusivu" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <div class="hero-kicker"><span class="tiny-star" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v20M2 12h20M5 5l14 14M5 19L19 5" stroke="currentColor" stroke-width="1"/></svg></span><span>KÄSITYÖNÄ. SINUA VARTEN.</span></div>
-        <h1 id="hero-title">Elämän<br><em>makeimpiin</em><br>hetkiin.</h1>
-        <p class="hero-description">Jokainen juhla on ainutlaatuinen.<br>Niin on myös sinun kakkusi.</p>
-        <p class="hero-detail">Toiveidesi mukaan suunniteltuja kakkuja,<br class="desktop-break"> rakkaudella vuodesta 2013.</p>
-        <a class="button button-wine" href="#kakut">Löydä oma kakkusi <span aria-hidden="true">↗</span></a>
-        <a class="hero-scroll" href="#tarinamme"><span class="scroll-line" aria-hidden="true"></span>TUTUSTU TARINAAMME <span aria-hidden="true">↓</span></a>
+    <section class="home-showcase observed-section" id="etusivu" aria-labelledby="hero-title">
+      <div class="showcase-content">
+        <header class="showcase-heading">
+          <p class="showcase-wordmark">CAKE68 <span>ART & TASTE · SINCE 2013</span></p>
+          <h1 id="hero-title">Elämän <em>makeimpiin</em> hetkiin.</h1>
+        </header>
+        <figure class="showcase-photo">
+          <img id="showcase-image" src="./assets/images/mousse.webp" width="1122" height="1402" alt="Inspiraatiokuva: suklaamoussekakku vadelmilla" fetchpriority="high">
+          <figcaption>KÄSITYÖNÄ. RAKKAUDELLA. SINUA VARTEN.</figcaption>
+        </figure>
+        <div class="cake-selector" role="region" aria-label="Kakkujen kuvagalleria" aria-roledescription="karuselli">
+          <div class="cake-orbit">
+            <button class="cake-orbit-card" type="button" data-slide="0" data-slot="0" aria-label="Näytä: Moussekakut" aria-pressed="true" aria-controls="showcase-image"><img src="./assets/images/mousse.webp" width="120" height="145" alt=""></button>
+            <button class="cake-orbit-card" type="button" data-slide="1" data-slot="1" aria-label="Näytä: Juhlakakut" aria-pressed="false" aria-controls="showcase-image"><img src="./assets/images/hero.webp" width="120" height="145" alt=""></button>
+            <button class="cake-orbit-card" type="button" data-slide="2" data-slot="2" aria-label="Näytä: Hääkakut" aria-pressed="false" aria-controls="showcase-image"><img src="./assets/images/wedding.webp" width="120" height="145" alt=""></button>
+            <button class="cake-orbit-card" type="button" data-slide="1" data-slot="3" aria-label="Näytä: Juhlakakut" aria-pressed="false" aria-controls="showcase-image"><img src="./assets/images/hero.webp" width="120" height="145" alt=""></button>
+            <button class="cake-orbit-card" type="button" data-slide="0" data-slot="4" aria-label="Näytä: Moussekakut" aria-pressed="false" aria-controls="showcase-image"><img src="./assets/images/mousse.webp" width="120" height="145" alt=""></button>
+            <button class="cake-orbit-card" type="button" data-slide="1" data-slot="5" aria-label="Näytä: Juhlakakut" aria-pressed="false" aria-controls="showcase-image"><img src="./assets/images/hero.webp" width="120" height="145" alt=""></button>
+            <button class="cake-orbit-card" type="button" data-slide="2" data-slot="6" aria-label="Näytä: Hääkakut" aria-pressed="false" aria-controls="showcase-image"><img src="./assets/images/wedding.webp" width="120" height="145" alt=""></button>
+            <button class="cake-orbit-card" type="button" data-slide="3" data-slot="7" aria-label="Näytä: Käsityön kauneutta" aria-pressed="false" aria-controls="showcase-image"><img src="./assets/images/craft.webp" width="120" height="145" alt=""></button>
+            <button class="cake-orbit-card" type="button" data-slide="0" data-slot="8" aria-label="Näytä: Moussekakut" aria-pressed="false" aria-controls="showcase-image"><img src="./assets/images/mousse.webp" width="120" height="145" alt=""></button>
+            <button class="cake-orbit-card" type="button" data-slide="3" data-slot="9" aria-label="Näytä: Käsityön kauneutta" aria-pressed="false" aria-controls="showcase-image"><img src="./assets/images/craft.webp" width="120" height="145" alt=""></button>
+            <button class="cake-orbit-card" type="button" data-slide="2" data-slot="10" aria-label="Näytä: Hääkakut" aria-pressed="false" aria-controls="showcase-image"><img src="./assets/images/wedding.webp" width="120" height="145" alt=""></button>
+            <button class="cake-orbit-card" type="button" data-slide="3" data-slot="11" aria-label="Näytä: Käsityön kauneutta" aria-pressed="false" aria-controls="showcase-image"><img src="./assets/images/craft.webp" width="120" height="145" alt=""></button>
+          </div>
+          <div class="showcase-controls">
+            <button class="showcase-arrow" id="showcase-previous" type="button" aria-label="Edellinen kuva" aria-controls="showcase-image"><span aria-hidden="true">←</span></button>
+            <p id="showcase-caption" aria-live="polite" aria-atomic="true">Moussekakut <span>01 / 04</span></p>
+            <button class="showcase-arrow" id="showcase-next" type="button" aria-label="Seuraava kuva" aria-controls="showcase-image"><span aria-hidden="true">→</span></button>
+          </div>
+          <a class="showcase-cta" href="#kakut">Tutustu kakkuihimme <span aria-hidden="true">↗</span></a>
+          <p class="showcase-disclosure">Tekoälyllä luotuja inspiraatiokuvia.</p>
+        </div>
       </div>
-      <div class="hero-visual">
-        <picture><source srcset="./assets/images/hero.webp" type="image/webp"><img src="./assets/images/hero.jpg" width="1200" height="1500" alt="Kakkuidea: käsin koristeltu vaalea juhlakakku, punaisia marjoja ja viininpunainen rusetti" fetchpriority="high"></picture>
-        <div class="image-topline"><span>CAKE68</span><span>ART & TASTE</span></div>
-        <div class="heritage-seal"><span>Rakkaudella</span><strong>2013</strong><span>vuodesta</span></div>
-        <p class="hero-image-caption">SINUN IDEASI. SINUN KAKKUSI. SINUN HETKESI.</p>
-      </div>
+      <div class="showcase-contact"><span>Cake68 · Art & Taste</span><a href="mailto:cake68fin@gmail.com">cake68fin@gmail.com</a><a href="tel:+358400810936">040 081 0936</a><span>Rakkaudella vuodesta 2013</span></div>
     </section>
     <div class="brand-note"><span>Käsin tehty.</span><span class="note-flower" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v20M2 12h20M5 5l14 14M5 19L19 5" stroke="currentColor" stroke-width="1"/></svg></span><span>Yhdessä suunniteltu.</span><span class="note-flower" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v20M2 12h20M5 5l14 14M5 19L19 5" stroke="currentColor" stroke-width="1"/></svg></span><span>Sinulle luotu.</span></div>
 

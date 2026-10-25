@@ -31,7 +31,8 @@ Lệnh này thêm canonical URL, `og:url` và chuyển `og:image` thành URL tuy
 
 - Nội dung và thông tin liên hệ: `index.html`.
 - Màu, typography, responsive: biến trong `:root` và media query của `styles.css`.
-- Điều khiển menu, tab danh mục, lightbox, mẫu email: `script.js`.
+- Điều khiển thư viện ảnh đầu trang, menu, tab danh mục, lightbox, mẫu email: `script.js`.
+- Màn hình đầu: ảnh bánh lớn, dãy ảnh thu nhỏ xếp vòng và thanh liên hệ đỏ rượu. Bấm ảnh thu nhỏ, dùng nút mũi tên hoặc vuốt ảnh lớn trên điện thoại để đổi ảnh.
 - Hình: `assets/images`. Font và giấy phép OFL: `assets/fonts`.
 - Mẫu email chỉ mở ứng dụng email của khách; khách xem, điền và tự gửi. Không có backend nhận đơn, không có biểu mẫu giả.
 - Nút danh mục từng loại bánh mở email đến `cake68fin@gmail.com` với nội dung điền sẵn. Nút gọi dùng `tel:+358400810936`.
